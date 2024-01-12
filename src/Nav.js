@@ -1,4 +1,5 @@
 import React from 'react';
+import { useState , useEffect} from 'react';
 import "./Nav.css";
 
 function Nav() {
@@ -9,10 +10,22 @@ function Nav() {
     const transitionNavBar = () => {
         if (window.scrollY > 100){
             handleShow(true)
+            // Then the black bar will show
         }
     }
+
+    useEffect(()=> {
+        // hook that takes a function and a second argument, the code will only run when the componenet mounts
+        window.addEventListener('scroll', transitionNavBar);
+        // this return function serves as a 'cleanup'
+        return () => window.removeEventListener('scroll', transitionNavBar) 
+        // everytime we scroll we are listening to event and will listen for scroll event and trigger transitionNavBar function
+
+    },[])
+
   return (
-    <div className ="nav nav_black">
+    // the interpolation below is saying: only render the navblack class if the show variable is true.
+    <div className ={`nav ${show && 'nav_black'}`}>
         <div className="nav_contents">
             <img 
             className="nav_logo"
