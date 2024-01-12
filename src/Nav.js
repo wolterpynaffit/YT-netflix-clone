@@ -3,16 +3,17 @@ import "./Nav.css";
 
 function Nav() {
   return (
-    <div className ="nav">
-        <img 
-        className="nav_logo"
-        src="/assets/Netflix_Logo.png" alt=""
-        />
-        <img 
-        className="nav_avatar"
-        src="https://upload.wikimedia.org/wikipedia/commons/0/0b/Netflix-avatar.png" alt=""
-        />
-    
+    <div className ="nav nav_black">
+        <div className="nav_contents">
+            <img 
+            className="nav_logo"
+            src="/assets/Netflix_Logo.png" alt=""
+            />
+            <img 
+            className="nav_avatar"
+            src="https://upload.wikimedia.org/wikipedia/commons/0/0b/Netflix-avatar.png" alt=""
+            />
+        </div>
     </div>
   )
 }
