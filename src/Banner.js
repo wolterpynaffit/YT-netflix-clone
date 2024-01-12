@@ -6,7 +6,19 @@ function Banner() {
     <header className = "banner" style={{
       backgroundSize: 'cover',
       backgroundPosition: 'center center',
-      backgroundImage:`url('https://s3.amazonaws.com/www.explorersweb.com/wp-content/uploads/2022/09/08171426/Broad-Peak-banner-1-e1662657343870.jpg')`}}>
+      // ensures the image remains central vertically and horizontally 
+      backgroundImage:`url('https://wallpapercave.com/dwp2x/wp8741227.jpg')`}}>
+        <div className="banner_contents">
+          <h1 className="banner_title">
+            Movie Name
+          </h1>
+          <div className="banner_buttons">
+            <button className = "banner_button">Play</button>
+            <button classname = "banner_button">My List</button>
+          </div>
+          <h1 className = "banner_description"> This is the description </h1>
+        </div>
+
   
     </header>
   )
