@@ -1,14 +1,12 @@
 .banner {
     position: relative;
-    height: 800px;
+    height: 415px;
     color: white;
     object-fit: contain;
     /* won't stretch regardless of whats inside-- if we have a bigger img and it changes its size-- the aspect ratio remains the same */
 }
 
-.banner_contents {
-
-
+.banner_contents{
     margin-left: 30px;
     padding-top: 140px;
     height: 190px;
@@ -18,4 +16,42 @@
     padding-bottom: 0.3rem;
     font-size: 3rem;
     font-weight: 800;
+}
+
+.banner_description {
+    width: 45rem;
+    line-height: 1.3;
+    padding-top: 1rem;
+    font-size: 0.8rem;
+    max-width: 360px;
+    height: 80px
+}
+.banner--fadeBottom {
+    height:7.4rem;
+    background-image: linear-gradient(
+        180deg,
+        transparent,
+        rgba(37,37,37, 061),
+        #111
+    )
+}
+.banner_button {
+    cursor: pointer;
+    color: white;
+    outline: none;
+    border: none;
+    font-weight: 700;
+    border-radius: 0.2vw;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    margin-right: 1rem;
+    padding-top: 0.5rem;
+    background-color: rgba(51,51,51,0.5);
+    padding-bottom: 0.5rem;
+}
+
+.banner_button:hover {
+    color: black;
+    background-color: #e6e6e6e6;
+    transition: all 0.2s;    
 }

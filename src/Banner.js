@@ -2,6 +2,9 @@ import React from 'react'
 import "./Banner.css"
 
 function Banner() {
+  function truncate(){
+    
+  }
   return (
     <header className = "banner" style={{
       backgroundSize: 'cover',
@@ -14,10 +17,11 @@ function Banner() {
           </h1>
           <div className="banner_buttons">
             <button className = "banner_button">Play</button>
-            <button classname = "banner_button">My List</button>
+            <button className = "banner_button">My List</button>
           </div>
           <h1 className = "banner_description"> This is the description </h1>
         </div>
+        <div className = "banner--fadeBottom"/>
 
   
     </header>
