@@ -4,7 +4,7 @@ import "./Banner.css"
 function Banner() {
   function truncate(string, n){
     // below is a ternary operator that checks to see if the length of the string is greater than 'n'. If the condition is true the first code snippit will run, adding an ellipses to the end of the string. Otherwise the second code snippit will run, which returns the full length of the string itself. 
-    return string?.length > n ? string.substring(0, n-1) + '...' : return string
+    return string?.length > n ? string.substring(0, n-1) + '...' : string
     // adding a questionmark (optional) because it string might not be present-- when an api call is made there might be a point when a string is undefined, so this is syntax is meant as a safegaurd to protect you from any potential errors. 
 
   }
@@ -22,7 +22,7 @@ function Banner() {
             <button className = "banner_button">Play</button>
             <button className = "banner_button">My List</button>
           </div>
-          <h1 className = "banner_description"> This is the description </h1>
+          <h1 className = "banner_description"> {truncate(`This is the descriptionThis project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) template.This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) template.This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) template.This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) template. l`, 250)} </h1>
         </div>
         <div className = "banner--fadeBottom"/>
 
