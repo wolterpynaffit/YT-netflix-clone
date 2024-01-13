@@ -2,8 +2,11 @@ import React from 'react'
 import "./Banner.css"
 
 function Banner() {
-  function truncate(){
-    
+  function truncate(string, n){
+    // below is a ternary operator that checks to see if the length of the string is greater than 'n'. If the condition is true the first code snippit will run, adding an ellipses to the end of the string. Otherwise the second code snippit will run, which returns the full length of the string itself. 
+    return string?.length > n ? string.substring(0, n-1) + '...' : return string
+    // adding a questionmark (optional) because it string might not be present-- when an api call is made there might be a point when a string is undefined, so this is syntax is meant as a safegaurd to protect you from any potential errors. 
+
   }
   return (
     <header className = "banner" style={{
