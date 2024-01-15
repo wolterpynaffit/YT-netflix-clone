@@ -1,6 +1,6 @@
 .banner {
     position: relative;
-    height: 415px;
+    height: 550px;
     color: white;
     object-fit: contain;
     /* won't stretch regardless of whats inside-- if we have a bigger img and it changes its size-- the aspect ratio remains the same */
@@ -30,6 +30,7 @@
     height:7.4rem;
     background-image: linear-gradient(
         180deg,
+        /* deg: this effects the rotation of the gradient "fade effect" */
         transparent,
         rgba(37,37,37, 061),
         #111
