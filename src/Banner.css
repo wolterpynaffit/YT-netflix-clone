@@ -27,12 +27,12 @@
     height: 80px
 }
 .banner--fadeBottom {
-    height:7.4rem;
+    height: 13.9rem;
     background-image: linear-gradient(
         180deg,
         /* deg: this effects the rotation of the gradient "fade effect" */
         transparent,
-        rgba(37,37,37, 061),
+        rgba(37, 37, 37, -0.80),
         #111
     )
 }

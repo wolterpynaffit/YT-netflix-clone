@@ -21,10 +21,8 @@ function Banner() {
     }
     fetchData()
   },[]) // empty dependency so that this code is only fired when the banner component mounts 
-  console.log(movie)
-  console.log('BACKDROP_PATH:' + movie.backdrop_path)
-  console.log('FIRST_AIR_DATE: ' +  movie.first_air_date)
-  console.log('MOVIE_NAME:' + movie.name)
+  console.log("TESTING: " + movie.name)
+
   function truncate(string, n){
     // below is a ternary operator that checks to see if the length of the string is greater than 'n'. If the condition is true the first code snippit will run, adding an ellipses to the end of the string. Otherwise the second code snippit will run, which returns the full length of the string itself. 
     return string?.length > n ? string.substring(0, n-1) + '...' : string
@@ -48,7 +46,7 @@ function Banner() {
             <button className = "banner_button">My List</button>
           </div>
 
-          <h1 className = "banner_description"> {truncate(movie?.overview, 250)} </h1>
+          <h1 className = "banner_description"> {truncate(movie?.overview, 150)} </h1>
 
 
         </div>
