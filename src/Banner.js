@@ -21,7 +21,7 @@ function Banner() {
     }
     fetchData()
   },[]) // empty dependency so that this code is only fired when the banner component mounts 
-  console.log("TESTING: " + movie.name)
+  // console.log("TESTING: " + movie.name)
 
   function truncate(string, n){
     // below is a ternary operator that checks to see if the length of the string is greater than 'n'. If the condition is true the first code snippit will run, adding an ellipses to the end of the string. Otherwise the second code snippit will run, which returns the full length of the string itself. 
