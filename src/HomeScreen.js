@@ -18,7 +18,9 @@ function HomeScreen() {
         {/* Row */}
         <Row
         title = 'NETFLIX ORIGINALS'
-        fetchUrl={requests.fetchNetflixOrinals}
+        fetchUrl={requests.fetchNetflixOriginals}
+        // ERROR: there was a spelling error with originals, which was preventing movies to be mapped correctly. 
+        
         isLargeRow
         />
         <Row
