@@ -2,10 +2,28 @@ import React, { useEffect, useState } from 'react'
 import axios from './axios'
 import "./Row.css"
 
+
+
+
+// function Row({title, fetchUrl, isLargeRow = false}) {
+//   const [movies, setMovies] = useState([]);
+//   const base_url = "https://image.tmdb.org/t/p/original/"
+
+//   useEffect(() => {
+//       async function fetchData() {
+//           const request = await axios.get(fetchUrl);
+//           setMovies(request.data.results);
+//           return request;
+//       }
+//       fetchData();
+//   }, [fetchUrl]);
+
+
 const Row = ({title, fetchUrl, isLargeRow = false}) => {
   const [movies, setMovies] = useState([]);
   // we are setting state for movies so that we can display the movies this will hold all the movies and allow us to display them 
-  const base_url = "https://api.themoviedb.org/3"
+  const base_url = "https://image.tmdb.org/t/p/original"
+  // part 2: movies weren't displaying because this link was wrong (its not the same link as the one listed in axios.js)
 
 
   //This code snippet defines an asynchronous function called fetchData. It uses the axios library to make an HTTP GET request to a specified URL (fetchUrl). The response from the request is stored in the request variable. It then calls a function called setMovies and passes the results property of the response data as an argument. Finally, it returns the request object.
@@ -41,32 +59,16 @@ const Row = ({title, fetchUrl, isLargeRow = false}) => {
     fetchData();
   }, [fetchUrl]);
 
-  // console.log( movies)
-  // console.log('this is FETCHURL:' , base_url + fetchUrl)
-
-  const API_KEY = 'faecfa97c656fff3de6165e36d71d11c';
-
-  const imageURL = `${base_url}'/u3ySnWqSjM3jedYgJZTR7RWRDDm.jpg?api_key=${API_KEY}`;
-
-  console.log('-------------------')
-  console.log(imageURL)
-  console.log('-------------------')
-
-
-
-
 
   return (
     <div className = "row">
       <h2> {title}</h2>
-      <img src= {fetchUrl} alt={title}/>
-      {/* {movies.map(movie  => ( 
-        <img src = {`${base_url}${isLargeRow ? movie.poster_path : movie.backdrop_path
-        }`} alt= {movie.name}/>
-      ))} */}
-      {movies.length > 0 ? (
+
+<div className='row_posters'>
+{movies.length > 0 ? (
       movies.map((movie) => (
         <img
+        className = {`row_poster ${isLargeRow && "row_posterLarge"}`}
           key={movie.id}
           src={`${base_url}${isLargeRow ? movie.poster_path : movie.backdrop_path}`}
           alt={movie.name}
@@ -77,8 +79,37 @@ const Row = ({title, fetchUrl, isLargeRow = false}) => {
     )}
 
     </div>
+</div>
+
   )
 }
 
 export default Row
 
+
+
+
+//     return (
+//     <div className="row">
+//         <h2>{title}</h2>
+        
+//         <div className="row_posters">
+//             {movies.map(
+//                 (movie) =>
+//                     ((isLargeRow && movie.poster_path) || 
+//                     (!isLargeRow && movie.backdrop_path)) && (
+//                     <img
+//                         className={`row_poster ${isLargeRow && "row_posterLarge"}`}
+//                         key={movie.id} 
+//                         src={`${base_url}${
+//                         isLargeRow ? movie.poster_path : movie.backdrop_path
+//                         }`} 
+//                         alt={movie.name}
+//                     />
+//                     ))}
+//         </div>
+//     </div>
+//     );
+// }
+
+// export default Row;
